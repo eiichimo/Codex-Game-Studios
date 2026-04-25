@@ -1,9 +1,9 @@
 <p align="center">
-  <h1 align="center">Claude Code Game Studios</h1>
+  <h1 align="center">Codex Game Studios</h1>
   <p align="center">
-    Turn a single Claude Code session into a full game development studio.
+    Unofficial Codex-oriented port of Claude Code Game Studios.
     <br />
-    49 agents. 72 skills. One coordinated AI team.
+    Game development workflows, studio roles, and quality gates for Codex.
   </p>
 </p>
 
@@ -19,6 +19,16 @@
 </p>
 
 ---
+
+> **Fork status:** This repository is an unofficial Codex-oriented fork of
+> [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)
+> by Donchitos. The original project is MIT licensed. This fork keeps the
+> upstream `.claude/` assets as source material while adding Codex-readable
+> instructions such as `AGENTS.md`.
+
+> **Porting status:** Early migration. Claude Code workflows are still present.
+> Codex-native instructions have started with `AGENTS.md` and
+> `docs/CODEX-PORTING.md`.
 
 ## Why This Exists
 
@@ -131,6 +141,38 @@ Type `/` in Claude Code to access all 72 skills:
 
 **Team Orchestration** (coordinate multiple agents on a single feature)
 `/team-combat` `/team-narrative` `/team-ui` `/team-release` `/team-polish` `/team-audio` `/team-level` `/team-live-ops` `/team-qa`
+
+## Codex Usage
+
+This fork is being ported to Codex incrementally. The first Codex-native skills
+live in `.agents/skills/`:
+
+- `cgs-start` — first-time onboarding and workflow routing
+- `cgs-help` — read-only "what should I do next?" guidance
+- `cgs-setup-engine` — engine, language, platform, and standards setup
+- `cgs-brainstorm` — concept ideation into `design/gdd/game-concept.md`
+- `cgs-map-systems` — systems decomposition into `design/gdd/systems-index.md`
+- `cgs-design-system` — section-by-section GDD authoring for one system
+- `cgs-design-review` — design/GDD readiness review
+- `cgs-gate-check` — phase transition readiness verdict
+- `cgs-dev-story` — story implementation with tests and acceptance coverage
+
+In Codex, use natural-language requests instead of Claude Code slash commands:
+
+```text
+Start Codex Game Studios onboarding.
+What should I do next in this game project?
+Configure this project for Godot 4.6 with GDScript.
+Brainstorm a game concept from this seed: cozy space salvaging.
+Map the systems for the current game concept.
+Design the next system GDD.
+Review design/gdd/combat-system.md for implementation readiness.
+Run a gate check for the Concept to Systems Design transition.
+Implement production/epics/foundation/STORY-001.md.
+```
+
+The original Claude Code workflows remain available under `.claude/` as source
+material during the migration.
 
 ## Getting Started
 
