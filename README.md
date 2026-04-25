@@ -176,6 +176,11 @@ live in `.agents/skills/`:
 - `cgs-changelog` — internal and player-facing changelog generation
 - `cgs-patch-notes` — public patch notes drafting
 - `cgs-hotfix` — emergency S1/S2 hotfix workflow
+- `cgs-milestone-review` — milestone progress and go/no-go review
+- `cgs-retrospective` — sprint or milestone retrospective
+- `cgs-bug-report` — bug filing, verification, and closure workflow
+- `cgs-bug-triage` — open bug prioritization and trend report
+- `cgs-playtest-report` — playtest template and feedback analysis
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -209,6 +214,11 @@ Run a dry-run launch checklist for July 15.
 Generate the changelog for version 0.3.0.
 Write detailed patch notes for version 0.3.0.
 Start a hotfix workflow for BUG-142.
+Review the current milestone.
+Create a retrospective for sprint 3.
+File a bug report for this crash description.
+Triage open bugs for the current sprint.
+Analyze playtest notes at production/qa/raw-notes/session-04.md.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source

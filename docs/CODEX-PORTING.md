@@ -20,7 +20,8 @@ license and attribution.
   `cgs-qa-plan`, `cgs-smoke-check`, `cgs-regression-suite`,
   `cgs-test-setup`, `cgs-test-helpers`, `cgs-release-checklist`,
   `cgs-launch-checklist`, `cgs-changelog`, `cgs-patch-notes`, and
-  `cgs-hotfix`.
+  `cgs-hotfix`, `cgs-milestone-review`, `cgs-retrospective`,
+  `cgs-bug-report`, `cgs-bug-triage`, and `cgs-playtest-report`.
 - `.codex` is treated as a local Codex runtime file and ignored by Git.
 
 ## Porting Principles
@@ -98,6 +99,6 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next production and bug-management workflows: `milestone-review`,
-`retrospective`, `bug-report`, `bug-triage`, and `playtest-report`. Keep each
-skill concise and load original `.claude/` source material only when needed.
+Port the next analysis and audit workflows: `scope-check`, `estimate`,
+`perf-profile`, `security-audit`, and `tech-debt`. Keep each skill concise and
+load original `.claude/` source material only when needed.
