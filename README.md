@@ -171,6 +171,11 @@ live in `.agents/skills/`:
 - `cgs-regression-suite` — audit and maintain regression coverage
 - `cgs-test-setup` — scaffold engine-specific test infrastructure
 - `cgs-test-helpers` — generate test helper utilities
+- `cgs-release-checklist` — pre-release validation checklist
+- `cgs-launch-checklist` — full launch readiness checklist
+- `cgs-changelog` — internal and player-facing changelog generation
+- `cgs-patch-notes` — public patch notes drafting
+- `cgs-hotfix` — emergency S1/S2 hotfix workflow
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -199,6 +204,11 @@ Run a smoke check for the current sprint.
 Audit the regression suite.
 Set up tests for the configured engine.
 Create test helpers for the combat system.
+Generate a release checklist for PC.
+Run a dry-run launch checklist for July 15.
+Generate the changelog for version 0.3.0.
+Write detailed patch notes for version 0.3.0.
+Start a hotfix workflow for BUG-142.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
