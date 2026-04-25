@@ -1,9 +1,9 @@
 <p align="center">
-  <h1 align="center">Claude Code Game Studios</h1>
+  <h1 align="center">Codex Game Studios</h1>
   <p align="center">
-    Turn a single Claude Code session into a full game development studio.
+    Unofficial Codex-oriented port of Claude Code Game Studios.
     <br />
-    49 agents. 72 skills. One coordinated AI team.
+    Game development workflows, studio roles, and quality gates for Codex.
   </p>
 </p>
 
@@ -19,6 +19,16 @@
 </p>
 
 ---
+
+> **Fork status:** This repository is an unofficial Codex-oriented fork of
+> [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)
+> by Donchitos. The original project is MIT licensed. This fork keeps the
+> upstream `.claude/` assets as source material while adding Codex-readable
+> instructions such as `AGENTS.md`.
+
+> **Porting status:** Early migration. Claude Code workflows are still present.
+> Codex-native instructions have started with `AGENTS.md` and
+> `docs/CODEX-PORTING.md`.
 
 ## Why This Exists
 
@@ -131,6 +141,128 @@ Type `/` in Claude Code to access all 72 skills:
 
 **Team Orchestration** (coordinate multiple agents on a single feature)
 `/team-combat` `/team-narrative` `/team-ui` `/team-release` `/team-polish` `/team-audio` `/team-level` `/team-live-ops` `/team-qa`
+
+## Codex Usage
+
+This fork is being ported to Codex incrementally. The first Codex-native skills
+live in `.agents/skills/`:
+
+- `cgs-start` — first-time onboarding and workflow routing
+- `cgs-help` — read-only "what should I do next?" guidance
+- `cgs-setup-engine` — engine, language, platform, and standards setup
+- `cgs-brainstorm` — concept ideation into `design/gdd/game-concept.md`
+- `cgs-map-systems` — systems decomposition into `design/gdd/systems-index.md`
+- `cgs-design-system` — section-by-section GDD authoring for one system
+- `cgs-design-review` — design/GDD readiness review
+- `cgs-gate-check` — phase transition readiness verdict
+- `cgs-dev-story` — story implementation with tests and acceptance coverage
+- `cgs-create-architecture` — master architecture blueprint creation
+- `cgs-architecture-decision` — ADR creation and retrofit
+- `cgs-create-epics` — convert systems/modules into epics
+- `cgs-create-stories` — break an epic into implementable stories
+- `cgs-story-done` — verify and close implemented stories
+- `cgs-architecture-review` — architecture coverage and engine compatibility review
+- `cgs-create-control-manifest` — generate programmer rules from Accepted ADRs
+- `cgs-story-readiness` — check if stories are implementation-ready
+- `cgs-code-review` — implementation code review
+- `cgs-sprint-plan` — create, update, or summarize sprint plans
+- `cgs-qa-plan` — generate sprint/feature/story QA plans
+- `cgs-smoke-check` — smoke readiness gate before QA handoff
+- `cgs-regression-suite` — audit and maintain regression coverage
+- `cgs-test-setup` — scaffold engine-specific test infrastructure
+- `cgs-test-helpers` — generate test helper utilities
+- `cgs-release-checklist` — pre-release validation checklist
+- `cgs-launch-checklist` — full launch readiness checklist
+- `cgs-changelog` — internal and player-facing changelog generation
+- `cgs-patch-notes` — public patch notes drafting
+- `cgs-hotfix` — emergency S1/S2 hotfix workflow
+- `cgs-milestone-review` — milestone progress and go/no-go review
+- `cgs-retrospective` — sprint or milestone retrospective
+- `cgs-bug-report` — bug filing, verification, and closure workflow
+- `cgs-bug-triage` — open bug prioritization and trend report
+- `cgs-playtest-report` — playtest template and feedback analysis
+- `cgs-scope-check` — read-only scope creep review
+- `cgs-estimate` — task effort estimate with confidence
+- `cgs-perf-profile` — performance risk and hotspot analysis
+- `cgs-security-audit` — release security risk audit
+- `cgs-tech-debt` — technical debt scan, register, and report
+- `cgs-quick-design` — lightweight spec for small design changes
+- `cgs-prototype` — isolated throwaway prototype workflow
+- `cgs-art-bible` — visual identity and asset standards authoring
+- `cgs-asset-spec` — per-asset specs and generation prompts
+- `cgs-asset-audit` — read-only asset compliance audit
+- `cgs-content-audit` — planned-vs-implemented content gap audit
+- `cgs-consistency-check` — cross-GDD registry consistency check
+- `cgs-balance-check` — balance data and formula analysis
+- `cgs-ux-design` — collaborative UX spec authoring
+- `cgs-ux-review` — read-only UX readiness review
+- `cgs-review-all-gdds` — holistic cross-GDD review
+- `cgs-propagate-design-change` — ADR impact analysis after GDD changes
+- `cgs-reverse-document` — generate docs from existing implementation
+- `cgs-localize` — localization pipeline workflows
+- `cgs-onboard` — role/area onboarding document generation
+
+In Codex, use natural-language requests instead of Claude Code slash commands:
+
+```text
+Start Codex Game Studios onboarding.
+What should I do next in this game project?
+Configure this project for Godot 4.6 with GDScript.
+Brainstorm a game concept from this seed: cozy space salvaging.
+Map the systems for the current game concept.
+Design the next system GDD.
+Review design/gdd/combat-system.md for implementation readiness.
+Run a gate check for the Concept to Systems Design transition.
+Implement production/epics/foundation/STORY-001.md.
+Create the architecture document from the approved GDDs.
+Create an ADR for event bus architecture.
+Create Foundation layer epics.
+Break the combat epic into stories.
+Verify story-001 is done.
+Review architecture coverage for the current GDDs.
+Generate the control manifest from accepted ADRs.
+Check readiness for all stories in the current sprint.
+Review the files changed by the current story.
+Create a new sprint plan from ready Foundation stories.
+Generate a QA plan for the current sprint.
+Run a smoke check for the current sprint.
+Audit the regression suite.
+Set up tests for the configured engine.
+Create test helpers for the combat system.
+Generate a release checklist for PC.
+Run a dry-run launch checklist for July 15.
+Generate the changelog for version 0.3.0.
+Write detailed patch notes for version 0.3.0.
+Start a hotfix workflow for BUG-142.
+Review the current milestone.
+Create a retrospective for sprint 3.
+File a bug report for this crash description.
+Triage open bugs for the current sprint.
+Analyze playtest notes at production/qa/raw-notes/session-04.md.
+Check scope creep for sprint 3.
+Estimate this inventory refactor.
+Profile performance risk for the combat system.
+Run a quick security audit.
+Scan technical debt and propose register updates.
+Create a quick design spec for a jump-height tuning change.
+Prototype this grappling-hook concept.
+Author the art bible from the current game concept.
+Generate asset specs for system:combat.
+Audit all assets for naming and manifest compliance.
+Audit content gaps for all MVP systems.
+Check GDD consistency against the entity registry.
+Run a balance check for the economy.
+Design the inventory UX spec.
+Review all UX specs for implementation readiness.
+Review all GDDs before architecture.
+Propagate design changes from design/gdd/combat.md.
+Reverse-document design from src/gameplay/combat.
+Run localization status.
+Create onboarding for a new QA contributor.
+```
+
+The original Claude Code workflows remain available under `.claude/` as source
+material during the migration.
 
 ## Getting Started
 
