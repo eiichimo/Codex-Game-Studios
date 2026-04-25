@@ -9,7 +9,7 @@ license and attribution.
 - Original Claude Code assets remain under `.claude/`.
 - Codex entry instructions exist in `AGENTS.md`.
 - Directory-scoped Codex instructions exist in `src/`, `design/`, and `docs/`.
-- 59 repo-local Codex skills exist in `.agents/skills/`.
+- 64 repo-local Codex skills exist in `.agents/skills/`.
 - Ported starter workflows: `cgs-start`, `cgs-help`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
   `cgs-design-review`, `cgs-gate-check`, `cgs-dev-story`,
@@ -30,7 +30,9 @@ license and attribution.
   `cgs-asset-audit`, `cgs-content-audit`, `cgs-consistency-check`,
   `cgs-balance-check`, `cgs-ux-design`, `cgs-ux-review`,
   `cgs-review-all-gdds`, `cgs-propagate-design-change`,
-  `cgs-reverse-document`, `cgs-localize`, and `cgs-onboard`.
+  `cgs-reverse-document`, `cgs-localize`, `cgs-onboard`,
+  `cgs-team-combat`, `cgs-team-ui`, `cgs-team-qa`, `cgs-team-release`,
+  and `cgs-team-polish`.
 - `.codex` is treated as a local Codex runtime file and ignored by Git.
 
 ## Porting Principles
@@ -108,6 +110,6 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next team orchestration workflows: `team-combat`, `team-ui`,
-`team-qa`, `team-release`, and `team-polish`. Preserve the original intent while
-rewriting delegation assumptions for Codex's explicit subagent policy.
+Port the remaining team orchestration workflows: `team-audio`, `team-level`,
+`team-live-ops`, and `team-narrative`. Then finish the utility workflows:
+`project-stage-detect`, `sprint-status`, `adopt`, and `day-one-patch`.

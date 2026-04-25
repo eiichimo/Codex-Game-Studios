@@ -206,6 +206,11 @@ live in `.agents/skills/`:
 - `cgs-reverse-document` — generate docs from existing implementation
 - `cgs-localize` — localization pipeline workflows
 - `cgs-onboard` — role/area onboarding document generation
+- `cgs-team-combat` — coordinate combat feature delivery
+- `cgs-team-ui` — coordinate UI feature delivery
+- `cgs-team-qa` — coordinate QA cycles and sign-off
+- `cgs-team-release` — coordinate release readiness and deployment planning
+- `cgs-team-polish` — coordinate release-quality polish passes
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -269,6 +274,11 @@ Propagate design changes from design/gdd/combat.md.
 Reverse-document design from src/gameplay/combat.
 Run localization status.
 Create onboarding for a new QA contributor.
+Coordinate a combat team pass for a melee parry system.
+Coordinate a UI team pass for the inventory screen.
+Coordinate QA for the current sprint.
+Coordinate release readiness for version 0.3.0.
+Coordinate a polish pass for combat feel.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
