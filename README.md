@@ -196,6 +196,11 @@ live in `.agents/skills/`:
 - `cgs-balance-check` — balance data and formula analysis
 - `cgs-ux-design` — collaborative UX spec authoring
 - `cgs-ux-review` — read-only UX readiness review
+- `cgs-review-all-gdds` — holistic cross-GDD review
+- `cgs-propagate-design-change` — ADR impact analysis after GDD changes
+- `cgs-reverse-document` — generate docs from existing implementation
+- `cgs-localize` — localization pipeline workflows
+- `cgs-onboard` — role/area onboarding document generation
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -249,6 +254,11 @@ Check GDD consistency against the entity registry.
 Run a balance check for the economy.
 Design the inventory UX spec.
 Review all UX specs for implementation readiness.
+Review all GDDs before architecture.
+Propagate design changes from design/gdd/combat.md.
+Reverse-document design from src/gameplay/combat.
+Run localization status.
+Create onboarding for a new QA contributor.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
