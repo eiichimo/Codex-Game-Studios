@@ -181,6 +181,11 @@ live in `.agents/skills/`:
 - `cgs-bug-report` — bug filing, verification, and closure workflow
 - `cgs-bug-triage` — open bug prioritization and trend report
 - `cgs-playtest-report` — playtest template and feedback analysis
+- `cgs-scope-check` — read-only scope creep review
+- `cgs-estimate` — task effort estimate with confidence
+- `cgs-perf-profile` — performance risk and hotspot analysis
+- `cgs-security-audit` — release security risk audit
+- `cgs-tech-debt` — technical debt scan, register, and report
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -219,6 +224,11 @@ Create a retrospective for sprint 3.
 File a bug report for this crash description.
 Triage open bugs for the current sprint.
 Analyze playtest notes at production/qa/raw-notes/session-04.md.
+Check scope creep for sprint 3.
+Estimate this inventory refactor.
+Profile performance risk for the combat system.
+Run a quick security audit.
+Scan technical debt and propose register updates.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
