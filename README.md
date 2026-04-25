@@ -156,6 +156,11 @@ live in `.agents/skills/`:
 - `cgs-design-review` — design/GDD readiness review
 - `cgs-gate-check` — phase transition readiness verdict
 - `cgs-dev-story` — story implementation with tests and acceptance coverage
+- `cgs-create-architecture` — master architecture blueprint creation
+- `cgs-architecture-decision` — ADR creation and retrofit
+- `cgs-create-epics` — convert systems/modules into epics
+- `cgs-create-stories` — break an epic into implementable stories
+- `cgs-story-done` — verify and close implemented stories
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -169,6 +174,11 @@ Design the next system GDD.
 Review design/gdd/combat-system.md for implementation readiness.
 Run a gate check for the Concept to Systems Design transition.
 Implement production/epics/foundation/STORY-001.md.
+Create the architecture document from the approved GDDs.
+Create an ADR for event bus architecture.
+Create Foundation layer epics.
+Break the combat epic into stories.
+Verify story-001 is done.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source

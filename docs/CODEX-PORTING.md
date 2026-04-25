@@ -12,7 +12,9 @@ license and attribution.
 - Initial repo-local Codex skills exist in `.agents/skills/`.
 - Ported starter workflows: `cgs-start`, `cgs-help`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
-  `cgs-design-review`, `cgs-gate-check`, and `cgs-dev-story`.
+  `cgs-design-review`, `cgs-gate-check`, `cgs-dev-story`,
+  `cgs-create-architecture`, `cgs-architecture-decision`,
+  `cgs-create-epics`, `cgs-create-stories`, and `cgs-story-done`.
 - `.codex` is treated as a local Codex runtime file and ignored by Git.
 
 ## Porting Principles
@@ -90,7 +92,7 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next planning and closure workflows: `create-architecture`,
-`architecture-decision`, `create-epics`, `create-stories`, and `story-done`.
+Port the next review and production-support workflows: `architecture-review`,
+`create-control-manifest`, `story-readiness`, `code-review`, and `sprint-plan`.
 Keep each skill concise and load original `.claude/` source material only when
 needed.
