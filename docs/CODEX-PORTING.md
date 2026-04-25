@@ -25,7 +25,8 @@ license and attribution.
   `cgs-scope-check`, `cgs-estimate`, `cgs-perf-profile`,
   `cgs-security-audit`, `cgs-tech-debt`, `cgs-quick-design`,
   `cgs-prototype`, `cgs-art-bible`, `cgs-asset-spec`, and
-  `cgs-asset-audit`.
+  `cgs-asset-audit`, `cgs-content-audit`, `cgs-consistency-check`,
+  `cgs-balance-check`, `cgs-ux-design`, and `cgs-ux-review`.
 - `.codex` is treated as a local Codex runtime file and ignored by Git.
 
 ## Porting Principles
@@ -103,6 +104,7 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next content and UX review workflows: `content-audit`,
-`consistency-check`, `balance-check`, `ux-design`, and `ux-review`. Keep each
-skill concise and load original `.claude/` source material only when needed.
+Port the next design-maintenance and documentation workflows:
+`review-all-gdds`, `propagate-design-change`, `reverse-document`, `localize`,
+and `onboard`. Keep each skill concise and load original `.claude/` source
+material only when needed.

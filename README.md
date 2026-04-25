@@ -191,6 +191,11 @@ live in `.agents/skills/`:
 - `cgs-art-bible` — visual identity and asset standards authoring
 - `cgs-asset-spec` — per-asset specs and generation prompts
 - `cgs-asset-audit` — read-only asset compliance audit
+- `cgs-content-audit` — planned-vs-implemented content gap audit
+- `cgs-consistency-check` — cross-GDD registry consistency check
+- `cgs-balance-check` — balance data and formula analysis
+- `cgs-ux-design` — collaborative UX spec authoring
+- `cgs-ux-review` — read-only UX readiness review
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -239,6 +244,11 @@ Prototype this grappling-hook concept.
 Author the art bible from the current game concept.
 Generate asset specs for system:combat.
 Audit all assets for naming and manifest compliance.
+Audit content gaps for all MVP systems.
+Check GDD consistency against the entity registry.
+Run a balance check for the economy.
+Design the inventory UX spec.
+Review all UX specs for implementation readiness.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
