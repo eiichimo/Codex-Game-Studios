@@ -161,6 +161,16 @@ live in `.agents/skills/`:
 - `cgs-create-epics` — convert systems/modules into epics
 - `cgs-create-stories` — break an epic into implementable stories
 - `cgs-story-done` — verify and close implemented stories
+- `cgs-architecture-review` — architecture coverage and engine compatibility review
+- `cgs-create-control-manifest` — generate programmer rules from Accepted ADRs
+- `cgs-story-readiness` — check if stories are implementation-ready
+- `cgs-code-review` — implementation code review
+- `cgs-sprint-plan` — create, update, or summarize sprint plans
+- `cgs-qa-plan` — generate sprint/feature/story QA plans
+- `cgs-smoke-check` — smoke readiness gate before QA handoff
+- `cgs-regression-suite` — audit and maintain regression coverage
+- `cgs-test-setup` — scaffold engine-specific test infrastructure
+- `cgs-test-helpers` — generate test helper utilities
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -179,6 +189,16 @@ Create an ADR for event bus architecture.
 Create Foundation layer epics.
 Break the combat epic into stories.
 Verify story-001 is done.
+Review architecture coverage for the current GDDs.
+Generate the control manifest from accepted ADRs.
+Check readiness for all stories in the current sprint.
+Review the files changed by the current story.
+Create a new sprint plan from ready Foundation stories.
+Generate a QA plan for the current sprint.
+Run a smoke check for the current sprint.
+Audit the regression suite.
+Set up tests for the configured engine.
+Create test helpers for the combat system.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
