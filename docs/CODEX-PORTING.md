@@ -9,7 +9,7 @@ license and attribution.
 - Original Claude Code assets remain under `.claude/`.
 - Codex entry instructions exist in `AGENTS.md`.
 - Directory-scoped Codex instructions exist in `src/`, `design/`, and `docs/`.
-- Initial repo-local Codex skills exist in `.agents/skills/`.
+- 59 repo-local Codex skills exist in `.agents/skills/`.
 - Ported starter workflows: `cgs-start`, `cgs-help`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
   `cgs-design-review`, `cgs-gate-check`, `cgs-dev-story`,
@@ -18,7 +18,9 @@ license and attribution.
   `cgs-architecture-review`, `cgs-create-control-manifest`,
   `cgs-story-readiness`, `cgs-code-review`, `cgs-sprint-plan`,
   `cgs-qa-plan`, `cgs-smoke-check`, `cgs-regression-suite`,
-  `cgs-test-setup`, `cgs-test-helpers`, `cgs-release-checklist`,
+  `cgs-test-setup`, `cgs-test-helpers`, `cgs-soak-test`,
+  `cgs-test-evidence-review`, `cgs-test-flakiness`, `cgs-skill-test`,
+  `cgs-skill-improve`, `cgs-release-checklist`,
   `cgs-launch-checklist`, `cgs-changelog`, `cgs-patch-notes`, and
   `cgs-hotfix`, `cgs-milestone-review`, `cgs-retrospective`,
   `cgs-bug-report`, `cgs-bug-triage`, `cgs-playtest-report`,
@@ -106,6 +108,6 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next QA utility workflows: `soak-test`, `test-evidence-review`,
-`test-flakiness`, `skill-test`, and `skill-improve`. Keep each skill concise and
-load original `.claude/` source material only when needed.
+Port the next team orchestration workflows: `team-combat`, `team-ui`,
+`team-qa`, `team-release`, and `team-polish`. Preserve the original intent while
+rewriting delegation assumptions for Codex's explicit subagent policy.

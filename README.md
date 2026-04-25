@@ -171,6 +171,11 @@ live in `.agents/skills/`:
 - `cgs-regression-suite` — audit and maintain regression coverage
 - `cgs-test-setup` — scaffold engine-specific test infrastructure
 - `cgs-test-helpers` — generate test helper utilities
+- `cgs-soak-test` — create extended play soak test protocols
+- `cgs-test-evidence-review` — evaluate automated and manual test evidence
+- `cgs-test-flakiness` — detect and classify flaky tests
+- `cgs-skill-test` — validate repo-local Codex skills
+- `cgs-skill-improve` — improve one Codex skill with a test-fix-retest loop
 - `cgs-release-checklist` — pre-release validation checklist
 - `cgs-launch-checklist` — full launch readiness checklist
 - `cgs-changelog` — internal and player-facing changelog generation
@@ -229,6 +234,11 @@ Run a smoke check for the current sprint.
 Audit the regression suite.
 Set up tests for the configured engine.
 Create test helpers for the combat system.
+Create a 2h soak test protocol focused on stability.
+Review test evidence for the current sprint.
+Scan test logs for flaky tests.
+Validate all Codex Game Studios skills.
+Improve the cgs-qa-plan skill.
 Generate a release checklist for PC.
 Run a dry-run launch checklist for July 15.
 Generate the changelog for version 0.3.0.
