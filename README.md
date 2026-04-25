@@ -186,6 +186,11 @@ live in `.agents/skills/`:
 - `cgs-perf-profile` — performance risk and hotspot analysis
 - `cgs-security-audit` — release security risk audit
 - `cgs-tech-debt` — technical debt scan, register, and report
+- `cgs-quick-design` — lightweight spec for small design changes
+- `cgs-prototype` — isolated throwaway prototype workflow
+- `cgs-art-bible` — visual identity and asset standards authoring
+- `cgs-asset-spec` — per-asset specs and generation prompts
+- `cgs-asset-audit` — read-only asset compliance audit
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
@@ -229,6 +234,11 @@ Estimate this inventory refactor.
 Profile performance risk for the combat system.
 Run a quick security audit.
 Scan technical debt and propose register updates.
+Create a quick design spec for a jump-height tuning change.
+Prototype this grappling-hook concept.
+Author the art bible from the current game concept.
+Generate asset specs for system:combat.
+Audit all assets for naming and manifest compliance.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
