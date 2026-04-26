@@ -426,9 +426,11 @@ Use them as explicit validation scripts or source material:
 Suggested baseline checks:
 
 ```bash
-bash -n .claude/hooks/*.sh
-python3 -m json.tool .claude/settings.json
+bash tools/codex-validate.sh baseline
 ```
+
+See [docs/CODEX-VALIDATION.md](docs/CODEX-VALIDATION.md) for the full hook
+migration table and validation modes.
 
 `settings.json` remains upstream Claude Code source material. Do not assume its
 permission rules apply to Codex.
