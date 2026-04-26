@@ -28,8 +28,8 @@
 
 > **Porting status:** The original 72 workflow skills now have repo-local Codex
 > ports under `.agents/skills/`. Claude Code assets remain available under
-> `.claude/` as upstream source material while agents, hooks, and rules continue
-> to be adapted for Codex.
+> `.claude/` as upstream source material; skills, role references, validation,
+> and path-scoped standards now have Codex-readable equivalents.
 
 ## Why This Exists
 
@@ -67,7 +67,7 @@ The result: you still make every decision, but now you have a team that asks the
 |----------|-------|-------------|
 | **Codex Skills** | 72 | Repo-local workflows under `.agents/skills/` for onboarding, design, architecture, stories, QA, release, and team coordination |
 | **Codex Role References** | 49 | Compact role references under `.agents/roles/`, mapped from the original agent definitions |
-| **Original Hooks** | 12 | Upstream validation scripts under `.claude/hooks/`; in Codex they are source material until explicit scripts or a plugin implement them |
+| **Codex Validation** | 12 | Original hooks mapped to explicit validation commands in `tools/codex-validate.sh` and `docs/CODEX-VALIDATION.md` |
 | **Codex Standards** | 11 | Path-scoped standards mapped into `docs/STANDARDS.md` and directory `AGENTS.md` files |
 | **Templates** | 39 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
 
@@ -309,6 +309,16 @@ Coordinate narrative work for the boss intro scene.
 The original Claude Code workflows remain available under `.claude/` as source
 material and attribution history. The active Codex workflow ports are under
 `.agents/skills/`.
+
+## Distribution
+
+This fork is distributed as a repository template first. Clone or fork it, then
+run Codex from the repository root so it can read `AGENTS.md`, `.agents/skills/`,
+`.agents/roles/`, and the directory-specific instructions.
+
+Codex plugin packaging is intentionally deferred. See
+[ADR-0001](docs/architecture/adr-0001-codex-plugin-packaging.md) for the
+decision and revisit criteria.
 
 ## Getting Started
 

@@ -16,6 +16,8 @@ license and attribution.
   `docs/CODEX-VALIDATION.md`.
 - Codex standards for all 11 original path-scoped rules exist in
   `docs/STANDARDS.md` and directory `AGENTS.md` files.
+- Codex plugin packaging is intentionally deferred by
+  `docs/architecture/adr-0001-codex-plugin-packaging.md`.
 - Ported starter workflows: `cgs-start`, `cgs-help`,
   `cgs-project-stage-detect`, `cgs-adopt`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
@@ -63,7 +65,7 @@ license and attribution.
 | `.claude/agents/*.md` | `.agents/roles/` compact Codex role references |
 | `.claude/hooks/*.sh` | `tools/codex-validate.sh` and `docs/CODEX-VALIDATION.md` |
 | `.claude/rules/*.md` | `docs/STANDARDS.md` and directory `AGENTS.md` files |
-| `.claude/settings.json` | Instructions, scripts, and optional plugin manifest |
+| `.claude/settings.json` | Instructions, scripts, and deferred plugin reference |
 | `/slash-command` usage | Natural-language requests or Codex skill triggers |
 
 ## Recommended Migration Phases
@@ -73,7 +75,8 @@ license and attribution.
 - Add `AGENTS.md` and directory-scoped `AGENTS.md` files.
 - Add this porting plan.
 - Add README attribution and explain the fork status.
-- Decide whether to package the port as a Codex plugin.
+- Decide whether to package the port as a Codex plugin. Decision recorded in
+  `docs/architecture/adr-0001-codex-plugin-packaging.md`.
 
 ### Phase 2: Core Workflows
 
@@ -118,6 +121,7 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-The original 72 Claude Code skills now have repo-local Codex skill ports. Next,
-decide whether deferred hook automation and distribution should be packaged as a
-Codex plugin.
+The core Codex port is complete at the template level: skills, role references,
+validation, standards, README positioning, and packaging decision are in place.
+Future work should be tracked as feature-specific improvements rather than
+foundational migration tasks.
