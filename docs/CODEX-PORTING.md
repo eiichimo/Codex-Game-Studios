@@ -9,18 +9,22 @@ license and attribution.
 - Original Claude Code assets remain under `.claude/`.
 - Codex entry instructions exist in `AGENTS.md`.
 - Directory-scoped Codex instructions exist in `src/`, `design/`, and `docs/`.
-- Initial repo-local Codex skills exist in `.agents/skills/`.
-- Ported starter workflows: `cgs-start`, `cgs-help`, `cgs-setup-engine`,
+- 72 repo-local Codex skills exist in `.agents/skills/`.
+- Ported starter workflows: `cgs-start`, `cgs-help`,
+  `cgs-project-stage-detect`, `cgs-adopt`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
   `cgs-design-review`, `cgs-gate-check`, `cgs-dev-story`,
   `cgs-create-architecture`, `cgs-architecture-decision`,
   `cgs-create-epics`, `cgs-create-stories`, `cgs-story-done`,
   `cgs-architecture-review`, `cgs-create-control-manifest`,
   `cgs-story-readiness`, `cgs-code-review`, `cgs-sprint-plan`,
+  `cgs-sprint-status`,
   `cgs-qa-plan`, `cgs-smoke-check`, `cgs-regression-suite`,
-  `cgs-test-setup`, `cgs-test-helpers`, `cgs-release-checklist`,
-  `cgs-launch-checklist`, `cgs-changelog`, `cgs-patch-notes`, and
-  `cgs-hotfix`, `cgs-milestone-review`, `cgs-retrospective`,
+  `cgs-test-setup`, `cgs-test-helpers`, `cgs-soak-test`,
+  `cgs-test-evidence-review`, `cgs-test-flakiness`, `cgs-skill-test`,
+  `cgs-skill-improve`, `cgs-release-checklist`,
+  `cgs-launch-checklist`, `cgs-changelog`, `cgs-patch-notes`,
+  `cgs-hotfix`, `cgs-day-one-patch`, `cgs-milestone-review`, `cgs-retrospective`,
   `cgs-bug-report`, `cgs-bug-triage`, `cgs-playtest-report`,
   `cgs-scope-check`, `cgs-estimate`, `cgs-perf-profile`,
   `cgs-security-audit`, `cgs-tech-debt`, `cgs-quick-design`,
@@ -28,7 +32,10 @@ license and attribution.
   `cgs-asset-audit`, `cgs-content-audit`, `cgs-consistency-check`,
   `cgs-balance-check`, `cgs-ux-design`, `cgs-ux-review`,
   `cgs-review-all-gdds`, `cgs-propagate-design-change`,
-  `cgs-reverse-document`, `cgs-localize`, and `cgs-onboard`.
+  `cgs-reverse-document`, `cgs-localize`, `cgs-onboard`,
+  `cgs-team-combat`, `cgs-team-ui`, `cgs-team-qa`, `cgs-team-release`,
+  `cgs-team-polish`, `cgs-team-audio`, `cgs-team-level`,
+  `cgs-team-live-ops`, and `cgs-team-narrative`.
 - `.codex` is treated as a local Codex runtime file and ignored by Git.
 
 ## Porting Principles
@@ -106,6 +113,7 @@ team orchestration, release, and utility.
 
 ## Next Concrete Step
 
-Port the next QA utility workflows: `soak-test`, `test-evidence-review`,
-`test-flakiness`, `skill-test`, and `skill-improve`. Keep each skill concise and
-load original `.claude/` source material only when needed.
+The original 72 Claude Code skills now have repo-local Codex skill ports. Next,
+reconcile remaining README sections that still describe Claude Code as the
+primary interface, convert the 49 original agent files into compact Codex role
+references, and decide whether to package the Codex port as a plugin.

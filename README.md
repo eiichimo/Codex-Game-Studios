@@ -26,9 +26,10 @@
 > upstream `.claude/` assets as source material while adding Codex-readable
 > instructions such as `AGENTS.md`.
 
-> **Porting status:** Early migration. Claude Code workflows are still present.
-> Codex-native instructions have started with `AGENTS.md` and
-> `docs/CODEX-PORTING.md`.
+> **Porting status:** The original 72 workflow skills now have repo-local Codex
+> ports under `.agents/skills/`. Claude Code assets remain available under
+> `.claude/` as upstream source material while agents, hooks, and rules continue
+> to be adapted for Codex.
 
 ## Why This Exists
 
@@ -144,11 +145,12 @@ Type `/` in Claude Code to access all 72 skills:
 
 ## Codex Usage
 
-This fork is being ported to Codex incrementally. The first Codex-native skills
-live in `.agents/skills/`:
+This fork provides repo-local Codex skills in `.agents/skills/`:
 
 - `cgs-start` — first-time onboarding and workflow routing
 - `cgs-help` — read-only "what should I do next?" guidance
+- `cgs-project-stage-detect` — read-only project stage and gap detection
+- `cgs-adopt` — brownfield template adoption audit
 - `cgs-setup-engine` — engine, language, platform, and standards setup
 - `cgs-brainstorm` — concept ideation into `design/gdd/game-concept.md`
 - `cgs-map-systems` — systems decomposition into `design/gdd/systems-index.md`
@@ -166,16 +168,23 @@ live in `.agents/skills/`:
 - `cgs-story-readiness` — check if stories are implementation-ready
 - `cgs-code-review` — implementation code review
 - `cgs-sprint-plan` — create, update, or summarize sprint plans
+- `cgs-sprint-status` — fast read-only sprint progress snapshot
 - `cgs-qa-plan` — generate sprint/feature/story QA plans
 - `cgs-smoke-check` — smoke readiness gate before QA handoff
 - `cgs-regression-suite` — audit and maintain regression coverage
 - `cgs-test-setup` — scaffold engine-specific test infrastructure
 - `cgs-test-helpers` — generate test helper utilities
+- `cgs-soak-test` — create extended play soak test protocols
+- `cgs-test-evidence-review` — evaluate automated and manual test evidence
+- `cgs-test-flakiness` — detect and classify flaky tests
+- `cgs-skill-test` — validate repo-local Codex skills
+- `cgs-skill-improve` — improve one Codex skill with a test-fix-retest loop
 - `cgs-release-checklist` — pre-release validation checklist
 - `cgs-launch-checklist` — full launch readiness checklist
 - `cgs-changelog` — internal and player-facing changelog generation
 - `cgs-patch-notes` — public patch notes drafting
 - `cgs-hotfix` — emergency S1/S2 hotfix workflow
+- `cgs-day-one-patch` — launch day-one patch planning
 - `cgs-milestone-review` — milestone progress and go/no-go review
 - `cgs-retrospective` — sprint or milestone retrospective
 - `cgs-bug-report` — bug filing, verification, and closure workflow
@@ -201,12 +210,23 @@ live in `.agents/skills/`:
 - `cgs-reverse-document` — generate docs from existing implementation
 - `cgs-localize` — localization pipeline workflows
 - `cgs-onboard` — role/area onboarding document generation
+- `cgs-team-combat` — coordinate combat feature delivery
+- `cgs-team-ui` — coordinate UI feature delivery
+- `cgs-team-qa` — coordinate QA cycles and sign-off
+- `cgs-team-release` — coordinate release readiness and deployment planning
+- `cgs-team-polish` — coordinate release-quality polish passes
+- `cgs-team-audio` — coordinate audio feature delivery
+- `cgs-team-level` — coordinate level or area design
+- `cgs-team-live-ops` — coordinate seasons and live events
+- `cgs-team-narrative` — coordinate narrative content delivery
 
 In Codex, use natural-language requests instead of Claude Code slash commands:
 
 ```text
 Start Codex Game Studios onboarding.
 What should I do next in this game project?
+Detect the current project stage.
+Audit this existing project for Codex Game Studios adoption.
 Configure this project for Godot 4.6 with GDScript.
 Brainstorm a game concept from this seed: cozy space salvaging.
 Map the systems for the current game concept.
@@ -224,16 +244,23 @@ Generate the control manifest from accepted ADRs.
 Check readiness for all stories in the current sprint.
 Review the files changed by the current story.
 Create a new sprint plan from ready Foundation stories.
+Show sprint status.
 Generate a QA plan for the current sprint.
 Run a smoke check for the current sprint.
 Audit the regression suite.
 Set up tests for the configured engine.
 Create test helpers for the combat system.
+Create a 2h soak test protocol focused on stability.
+Review test evidence for the current sprint.
+Scan test logs for flaky tests.
+Validate all Codex Game Studios skills.
+Improve the cgs-qa-plan skill.
 Generate a release checklist for PC.
 Run a dry-run launch checklist for July 15.
 Generate the changelog for version 0.3.0.
 Write detailed patch notes for version 0.3.0.
 Start a hotfix workflow for BUG-142.
+Plan a day-one patch for version 1.0.0.
 Review the current milestone.
 Create a retrospective for sprint 3.
 File a bug report for this crash description.
@@ -259,6 +286,15 @@ Propagate design changes from design/gdd/combat.md.
 Reverse-document design from src/gameplay/combat.
 Run localization status.
 Create onboarding for a new QA contributor.
+Coordinate a combat team pass for a melee parry system.
+Coordinate a UI team pass for the inventory screen.
+Coordinate QA for the current sprint.
+Coordinate release readiness for version 0.3.0.
+Coordinate a polish pass for combat feel.
+Coordinate audio design for the forest biome.
+Coordinate level design for the tutorial area.
+Coordinate a live-ops event for winter festival.
+Coordinate narrative work for the boss intro scene.
 ```
 
 The original Claude Code workflows remain available under `.claude/` as source
