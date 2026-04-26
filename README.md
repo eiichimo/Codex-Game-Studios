@@ -68,7 +68,7 @@ The result: you still make every decision, but now you have a team that asks the
 | **Codex Skills** | 72 | Repo-local workflows under `.agents/skills/` for onboarding, design, architecture, stories, QA, release, and team coordination |
 | **Codex Role References** | 49 | Compact role references under `.agents/roles/`, mapped from the original agent definitions |
 | **Original Hooks** | 12 | Upstream validation scripts under `.claude/hooks/`; in Codex they are source material until explicit scripts or a plugin implement them |
-| **Original Rules** | 11 | Upstream path-scoped standards under `.claude/rules/`; Codex equivalents are being moved into AGENTS/docs guidance |
+| **Codex Standards** | 11 | Path-scoped standards mapped into `docs/STANDARDS.md` and directory `AGENTS.md` files |
 | **Templates** | 39 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
 
 ## Studio Roles
@@ -437,8 +437,8 @@ permission rules apply to Codex.
 
 ### Path-Scoped Rules
 
-The original path-scoped rules describe standards by file location. In Codex,
-they are guidance until each rule is moved into AGENTS/docs equivalents:
+The original path-scoped rules are mapped into
+[docs/STANDARDS.md](docs/STANDARDS.md) and directory `AGENTS.md` files:
 
 | Path | Enforces |
 |------|----------|

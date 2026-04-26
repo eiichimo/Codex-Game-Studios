@@ -14,6 +14,7 @@ bash tools/codex-validate.sh staged
 bash tools/codex-validate.sh assets
 bash tools/codex-validate.sh skills
 bash tools/codex-validate.sh roles
+bash tools/codex-validate.sh standards
 ```
 
 Use `baseline` before commits that touch documentation, skills, roles, hooks, or
@@ -44,6 +45,7 @@ settings. Use `all` before release or template maintenance changes.
 - `.claude/settings.json` JSON validity.
 - `.agents/skills/` contains 72 skills with required metadata.
 - `.agents/roles/` maps all 49 original role files.
+- `docs/STANDARDS.md` maps all 11 original path-scoped rule files.
 
 ## What All Checks
 

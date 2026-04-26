@@ -36,3 +36,19 @@ additions that do not need a full GDD.
 
 Before passing UX work to implementation, check alignment with the relevant GDDs
 and accessibility requirements.
+
+## Narrative Docs
+
+For `design/narrative/**`:
+
+- Cross-reference new lore against existing lore for contradictions.
+- Every lore entry needs a canon level: Established, Provisional, or Under
+  Review.
+- Dialogue must match the relevant character voice profile.
+- World rules must state what is possible and impossible.
+- Mysteries need documented true answers even if players never learn them.
+- Faction motivations, relationships, and power structures must be internally
+  logical.
+- Player-facing text must be localization-ready with named placeholders.
+- Dialogue lines should stay under 120 characters unless the UI spec allows
+  longer text.
