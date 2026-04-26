@@ -12,6 +12,8 @@ license and attribution.
 - 72 repo-local Codex skills exist in `.agents/skills/`.
 - Codex role references for all 49 original agent roles exist in
   `.agents/roles/`.
+- Explicit Codex validation commands exist in `tools/codex-validate.sh` and
+  `docs/CODEX-VALIDATION.md`.
 - Ported starter workflows: `cgs-start`, `cgs-help`,
   `cgs-project-stage-detect`, `cgs-adopt`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
@@ -57,7 +59,7 @@ license and attribution.
 | `directory/CLAUDE.md` | `directory/AGENTS.md` |
 | `.claude/skills/*/SKILL.md` | Codex skills or workflow references |
 | `.claude/agents/*.md` | `.agents/roles/` compact Codex role references |
-| `.claude/hooks/*.sh` | Explicit validation scripts or plugin hooks |
+| `.claude/hooks/*.sh` | `tools/codex-validate.sh` and `docs/CODEX-VALIDATION.md` |
 | `.claude/settings.json` | Instructions, scripts, and optional plugin manifest |
 | `/slash-command` usage | Natural-language requests or Codex skill triggers |
 
@@ -91,13 +93,11 @@ Port the smallest workflow set needed to use the project end-to-end:
 
 ### Phase 4: Validation
 
-Convert hooks into explicit checks:
-
-- Session/project state check
-- Commit and push safety checks
-- Asset validation
-- Skill structure validation
-- Gap detection
+- Complete baseline: explicit checks exist for session/project state, staged
+  commit checks, asset validation, skill catalog validation, role catalog
+  validation, and gap detection.
+- Deferred automation: notification, compaction, push interception, and
+  subagent audit logging require plugin support.
 
 ### Phase 5: Full Catalog
 
@@ -116,6 +116,5 @@ team orchestration, release, and utility.
 ## Next Concrete Step
 
 The original 72 Claude Code skills now have repo-local Codex skill ports. Next,
-port the original hooks into explicit Codex validation workflows, port
-path-scoped rules into Codex standards, and decide whether to package the Codex
-port as a plugin.
+port path-scoped rules into Codex standards and decide whether deferred hook
+automation should be packaged as a Codex plugin.

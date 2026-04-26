@@ -97,8 +97,7 @@ engine is configured, validate documentation and shell scripts only.
 Suggested baseline checks:
 
 ```bash
-bash -n .claude/hooks/*.sh
-python3 -m json.tool .claude/settings.json
+bash tools/codex-validate.sh baseline
 ```
 
 ## Attribution
