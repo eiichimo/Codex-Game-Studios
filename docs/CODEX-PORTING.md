@@ -14,6 +14,8 @@ license and attribution.
   `.agents/roles/`.
 - Explicit Codex validation commands exist in `tools/codex-validate.sh` and
   `docs/CODEX-VALIDATION.md`.
+- Codex standards for all 11 original path-scoped rules exist in
+  `docs/STANDARDS.md` and directory `AGENTS.md` files.
 - Ported starter workflows: `cgs-start`, `cgs-help`,
   `cgs-project-stage-detect`, `cgs-adopt`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
@@ -60,6 +62,7 @@ license and attribution.
 | `.claude/skills/*/SKILL.md` | Codex skills or workflow references |
 | `.claude/agents/*.md` | `.agents/roles/` compact Codex role references |
 | `.claude/hooks/*.sh` | `tools/codex-validate.sh` and `docs/CODEX-VALIDATION.md` |
+| `.claude/rules/*.md` | `docs/STANDARDS.md` and directory `AGENTS.md` files |
 | `.claude/settings.json` | Instructions, scripts, and optional plugin manifest |
 | `/slash-command` usage | Natural-language requests or Codex skill triggers |
 
@@ -116,5 +119,5 @@ team orchestration, release, and utility.
 ## Next Concrete Step
 
 The original 72 Claude Code skills now have repo-local Codex skill ports. Next,
-port path-scoped rules into Codex standards and decide whether deferred hook
-automation should be packaged as a Codex plugin.
+decide whether deferred hook automation and distribution should be packaged as a
+Codex plugin.

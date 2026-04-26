@@ -75,6 +75,21 @@ validate_role_catalog() {
   fi
 }
 
+validate_standard_catalog() {
+  local source_count mapped_count missing
+  source_count=$(find .claude/rules -maxdepth 1 -type f -name '*.md' -print 2>/dev/null | wc -l | tr -d ' ')
+  mapped_count=$(rg -o '\.claude/rules/[a-z0-9-]+\.md' docs/STANDARDS.md 2>/dev/null | sort -u | wc -l | tr -d ' ')
+
+  if [ "$source_count" != "$mapped_count" ]; then
+    echo "Expected $source_count rule mappings, found $mapped_count" >&2
+    missing=$(comm -3 \
+      <(find .claude/rules -maxdepth 1 -type f -name '*.md' -printf '.claude/rules/%f\n' | sort) \
+      <(rg -o '\.claude/rules/[a-z0-9-]+\.md' docs/STANDARDS.md | sort -u))
+    [ -n "$missing" ] && echo "$missing" >&2
+    return 1
+  fi
+}
+
 validate_assets() {
   local failures=0
   if [ -d assets ]; then
@@ -108,6 +123,7 @@ run_baseline() {
   run_check "Claude settings JSON" python_json_tool .claude/settings.json
   run_check "Codex skill catalog" validate_skill_catalog
   run_check "Codex role catalog" validate_role_catalog
+  run_check "Codex standards catalog" validate_standard_catalog
 }
 
 case "$MODE" in
@@ -135,8 +151,11 @@ case "$MODE" in
   roles)
     run_check "Codex role catalog" validate_role_catalog
     ;;
+  standards)
+    run_check "Codex standards catalog" validate_standard_catalog
+    ;;
   *)
-    echo "Usage: bash tools/codex-validate.sh [baseline|all|session|staged|assets|skills|roles]" >&2
+    echo "Usage: bash tools/codex-validate.sh [baseline|all|session|staged|assets|skills|roles|standards]" >&2
     exit 2
     ;;
 esac

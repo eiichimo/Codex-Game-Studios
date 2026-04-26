@@ -88,6 +88,8 @@ file exists.
 - Add or update ADRs for new architecture decisions.
 - Keep generated or throwaway prototype code under `prototypes/`, not `src/`.
 - Check `docs/engine-reference/` before relying on engine APIs.
+- Read `docs/STANDARDS.md` and the nearest directory `AGENTS.md` before editing
+  path-sensitive code, assets, tests, prototypes, or design docs.
 
 ## Validation
 
