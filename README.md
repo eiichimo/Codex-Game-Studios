@@ -66,7 +66,7 @@ The result: you still make every decision, but now you have a team that asks the
 | Category | Count | Description |
 |----------|-------|-------------|
 | **Codex Skills** | 72 | Repo-local workflows under `.agents/skills/` for onboarding, design, architecture, stories, QA, release, and team coordination |
-| **Original Agent Roles** | 49 | Upstream role definitions across design, programming, art, audio, narrative, QA, and production, pending Codex role-reference conversion |
+| **Codex Role References** | 49 | Compact role references under `.agents/roles/`, mapped from the original agent definitions |
 | **Original Hooks** | 12 | Upstream validation scripts under `.claude/hooks/`; in Codex they are source material until explicit scripts or a plugin implement them |
 | **Original Rules** | 11 | Upstream path-scoped standards under `.claude/rules/`; Codex equivalents are being moved into AGENTS/docs guidance |
 | **Templates** | 39 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
@@ -100,8 +100,8 @@ Tier 3 — Specialists (Sonnet/Haiku)
 
 ### Engine Specialists
 
-The template includes original role sets for all three major engines. Use them
-as engine-specific guidance while the Codex role library is being ported:
+The template includes role references for all three major engines. Use them as
+engine-specific guidance:
 
 | Engine | Lead Agent | Sub-Specialists |
 |--------|-----------|-----------------|
@@ -353,6 +353,7 @@ versions, and which files are safe to overwrite vs. which need a manual merge.
 AGENTS.md                           # Codex repository instructions
 .agents/
   skills/                           # 72 Codex workflow skills
+  roles/                            # 49 Codex role references
 CLAUDE.md                           # Upstream Claude Code configuration source
 .claude/
   settings.json                     # Upstream Claude Code settings source

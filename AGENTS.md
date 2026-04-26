@@ -6,17 +6,20 @@ Keep the original MIT license and attribution intact.
 ## Repository Purpose
 
 This is a game-development workflow template for Codex. It adapts the original
-Claude Code assets into Codex-readable project instructions, skills, reference
-docs, and validation scripts.
+Claude Code assets into Codex-readable project instructions, skills, role
+references, docs, and validation scripts.
 
-The current source-of-truth assets are still under `.claude/` until each area is
-ported:
+The original upstream assets remain under `.claude/` for attribution and source
+material. Ported Codex-native assets live under `.agents/` and normal repo docs.
 
 - `.claude/agents/` contains the original studio role definitions.
 - `.claude/skills/` contains the original slash-command workflows.
 - `.claude/hooks/` contains the original validation and session scripts.
 - `.claude/rules/` contains the original path-scoped standards.
 - `.claude/docs/` contains workflow catalogs, templates, and technical guidance.
+- `.agents/skills/` contains Codex-native ports of the 72 original workflows.
+- `.agents/roles/` contains compact Codex role references for the 49 original
+  agent definitions.
 
 When porting, preserve the intent but remove Claude Code-specific assumptions.
 
@@ -28,6 +31,8 @@ When porting, preserve the intent but remove Claude Code-specific assumptions.
 - Convert named Claude subagents into Codex delegation guidance. Codex may use
   available subagent roles only when the user explicitly asks for delegation or
   parallel agent work.
+- Use `.agents/roles/` as the first stop for role-shaped analysis. Read
+  `.claude/agents/` only when full upstream detail is needed.
 - Convert `AskUserQuestion` steps into concise user questions. In default
   Codex operation, make reasonable assumptions unless a decision is genuinely
   blocking or risky.

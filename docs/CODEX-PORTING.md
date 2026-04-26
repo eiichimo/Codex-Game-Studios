@@ -10,6 +10,8 @@ license and attribution.
 - Codex entry instructions exist in `AGENTS.md`.
 - Directory-scoped Codex instructions exist in `src/`, `design/`, and `docs/`.
 - 72 repo-local Codex skills exist in `.agents/skills/`.
+- Codex role references for all 49 original agent roles exist in
+  `.agents/roles/`.
 - Ported starter workflows: `cgs-start`, `cgs-help`,
   `cgs-project-stage-detect`, `cgs-adopt`, `cgs-setup-engine`,
   `cgs-brainstorm`, `cgs-map-systems`, `cgs-design-system`,
@@ -54,7 +56,7 @@ license and attribution.
 | `CLAUDE.md` | `AGENTS.md` |
 | `directory/CLAUDE.md` | `directory/AGENTS.md` |
 | `.claude/skills/*/SKILL.md` | Codex skills or workflow references |
-| `.claude/agents/*.md` | Role prompt references and delegation guidance |
+| `.claude/agents/*.md` | `.agents/roles/` compact Codex role references |
 | `.claude/hooks/*.sh` | Explicit validation scripts or plugin hooks |
 | `.claude/settings.json` | Instructions, scripts, and optional plugin manifest |
 | `/slash-command` usage | Natural-language requests or Codex skill triggers |
@@ -83,9 +85,9 @@ Port the smallest workflow set needed to use the project end-to-end:
 
 ### Phase 3: Role Library
 
-Convert the 49 original agent files into compact role references. Codex should
-use them to shape analysis and implementation, not as guaranteed named
-subagents.
+- Complete: the 49 original agent files are mapped in `.agents/roles/`.
+- Codex should use them to shape analysis and implementation, not as guaranteed
+  named subagents.
 
 ### Phase 4: Validation
 
@@ -114,6 +116,6 @@ team orchestration, release, and utility.
 ## Next Concrete Step
 
 The original 72 Claude Code skills now have repo-local Codex skill ports. Next,
-reconcile remaining README sections that still describe Claude Code as the
-primary interface, convert the 49 original agent files into compact Codex role
-references, and decide whether to package the Codex port as a plugin.
+port the original hooks into explicit Codex validation workflows, port
+path-scoped rules into Codex standards, and decide whether to package the Codex
+port as a plugin.
